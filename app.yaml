@@ -4,7 +4,8 @@ entrypoint: gunicorn -b :$PORT main:app
 instance_class: F1
 
 handlers:
-- url: /
+- url: /.*
   script: auto
+
 env_variables:
   SEED_TOKEN: "change-me-seed-token"
