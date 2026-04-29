@@ -13,7 +13,8 @@ Cette stabilité s'explique par la réactivité de Google App Engine qui ajuste 
 Le moment le plus critique survient lors du passage à mille utilisateurs. Au premier run, le temps de réponse grimpe brutalement à mille six cents millisecondes 
 car l'infrastructure subit un choc de charge alors qu'elle n'a pas encore assez de serveurs actifs. 
 Cependant, dès le troisième run, ce temps chute à quatre cent trente millisecondes grâce au déploiement de vingt instances. 
-Cela prouve que le système scale bien car il finit par stabiliser la latence en multipliant ses ressources.
+Cela prouve que le système scale bien car il finit par stabiliser la latence en multipliant ses ressources. 
+Nous sommes cependant limité à 20 instances sur google cloud, on peut donc pas scale au dessus de cette limite.
 
 **Partie 2 du TP**
 
