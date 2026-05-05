@@ -21,11 +21,10 @@ Nous sommes cependant limité à 20 instances sur google cloud, on peut donc pas
 
 ![Graphique de charge](out/fan_out graphique.png)
 
-Concernant la seconde expérience sur la taille des données détaillée dans le fichier fanout.csv, les résultats montrent une résistance de l'application à la complexité des requêtes. 
-Malgré le triplement du nombre d'abonnés, passant de vingt à soixante follows, le temps moyen de réponse ne subit aucune dégradation significative et se maintient aux alentours de quarante millisecondes. 
-Ce comportement est logique puisque Datastore utilise des index composites pour retrouver les entités sans avoir à parcourir toute la base de données. 
+Concernant la seconde expérience sur la taille des données détaillée dans le fichier fanout.csv, les résultats montrent une moins bonne de l'application à la complexité des requêtes. 
+Malgré le triplement du nombre d'abonnés, passant de vingt à soixante follows, le temps moyen de réponse double de manière significative et se maintient aux alentours de 80 millisecondes. 
 L'infrastructure compense le léger surcroît de travail processeur en maintenant quatre instances actives au lieu des trois habituelles pour cette charge. 
-L'application scale donc parfaitement sur le plan logiciel car la structure des données et leur volume n'impactent pas l'expérience de l'utilisateur final.
+On en peut ici pas ainsi dire que l'application scale.
 
 
 **Conclusion**
